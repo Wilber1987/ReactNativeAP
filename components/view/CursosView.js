@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ActivityIndicator, TextInput } from 'react-nati
 //Model
 import { TblCurso } from "../../model/TblCurso";
 //Componentes
-import {CardCursoComp} from "../util/CardCursoComp"
+import { CardCursoComp } from "../util/CardCursoComp"
 class CursosView extends React.Component {
     constructor(props) {
         super();
@@ -22,17 +22,15 @@ class CursosView extends React.Component {
         });
     }
     render() {
-        return (<View style={{ flex: 5 }}>
+        return <View style={{ flex: 5 }}>
             <Text>Cursos View</Text>
-            <TextInput style={{padding:10, margin: 10}} 
-            placeholder='Buscar'
-            onChangeText={ val => this.CargarCursos(val)}></TextInput>
-            {this.state.isLoading ?
-                <ActivityIndicator /> :
+            <TextInput style={{ padding: 10, margin: 10 }} placeholder='Buscar'
+                onChangeText={val => this.CargarCursos(val)} />
+            {this.state.isLoading ? <ActivityIndicator /> :
                 this.state.Dataset.map(
-                    curso => <CardCursoComp data = {curso}/>
+                    curso => <CardCursoComp key={curso.IdCurso} data={curso} />
                 )}
-        </View>)
+        </View>
     }
 }
 export { CursosView }

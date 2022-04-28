@@ -1,10 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 const CardCursoComp = (props) => {
     return (<View style={styles.CardStyle}>
         <Text style={styles.Title}>Detalle</Text>
         <Text style={styles.Atribute}>Nombres: {props.data.NombreCurso}</Text>
-        <Text style={styles.Resumen}>Resumen: {props.data.ResumenCurso}</Text>
+        {/* <Text style={styles.Resumen}>Resumen: {props.data.ResumenCurso}</Text> */}
         <Text style={styles.Atribute}>Fecha: {props.data.FechaCreacion}</Text>
+        <Button title="Ver Matriculados" onPress={() => {
+            props.function(props.data.IdCurso);
+        }}> </Button>
     </View>);
 }
 export { CardCursoComp }

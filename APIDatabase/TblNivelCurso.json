@@ -1,0 +1,32 @@
+[
+        {
+            "IdNivelCurso": "1",
+            "NivelCurso": "Cursos Libres",
+            "Estado": "1"
+        },
+        {
+            "IdNivelCurso": "2",
+            "NivelCurso": "Diplomados",
+            "Estado": "1"
+        },
+        {
+            "IdNivelCurso": "3",
+            "NivelCurso": "Maestrias",
+            "Estado": "1"
+        },
+        {
+            "IdNivelCurso": "4",
+            "NivelCurso": "Doctorados",
+            "Estado": "1"
+        },
+        {
+            "IdNivelCurso": "5",
+            "NivelCurso": "Postgrados",
+            "Estado": "1"
+        },
+        {
+            "IdNivelCurso": "7",
+            "NivelCurso": "Carreras",
+            "Estado": "1"
+        }
+    ]

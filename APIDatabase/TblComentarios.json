@@ -1,0 +1,167 @@
+[
+        {
+            "IdComentario": "4",
+            "Votacion": "1",
+            "Comentario": "Excelentes Vídeos\r\nMuchas Gracias por sus Conocimientos :)\r\n",
+            "FechaComentario": "21/8/2015 15:37:44.077",
+            "UserName": "c11094523",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "4",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "6",
+            "Votacion": "1",
+            "Comentario": "he realizado la descarga de los videos que nos ha brindado voy a verlos este fin de semana y poner en practica y agradezco por ayudarnos a obtener mejores conocimientos",
+            "FechaComentario": "21/8/2015 15:49:05.16",
+            "UserName": "c11092620",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "4",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "8",
+            "Votacion": "5",
+            "Comentario": "Excelente Explicación Prof. Marcos Soza",
+            "FechaComentario": "28/8/2015 18:48:47.123",
+            "UserName": "c08093380",
+            "TipoComentario": "Video",
+            "Estado": "1",
+            "IdComentarioPadre": "4",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "9",
+            "Votacion": "5",
+            "Comentario": "Entity Framework para el desarrollo de aplicaciones de software orientadas a datos\r\ny LINQ para realizar todo tipo de consultas a distintas fuentes de datos facilitan \r\nnuestro trabajo con las bases de datos.\r\n\r\nque mejor manera de la forma que lo explica en los videos gracias profesor Marcos, excelentes tutoriales... (Y)\r\n\r\n",
+            "FechaComentario": "28/8/2015 20:07:38.437",
+            "UserName": "c08093380",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "4",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "10",
+            "Votacion": "1",
+            "Comentario": "La creación de este sitio web es de suma importancia debido a que los alumnos refuerzan los conocimientos a traves de vídeos ya que uno como estudiante visualiza el vídeo de la clase y pausa cada vez que sea necesario para practicar un paso que quizás en la clase por el tiempo o por la distracción de la sección lo obviamos......pero es aquí en la parte de visualización de los vídeos un respaldo que podemos contemplar la visualización del vídeo cada vez que pasemos por alto algún seguimiento.Gracias",
+            "FechaComentario": "30/8/2015 07:38:45.817",
+            "UserName": "c11092620",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "4",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "11",
+            "Votacion": "1",
+            "Comentario": "excelente curso nos ha dado a conocer y comprender una nueva tecnología para la manipulación de la información de una base de datos abstrayendo  de la complejidad de ADO.Net",
+            "FechaComentario": "3/9/2015 16:22:08.157",
+            "UserName": "c08096202",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "4",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "12",
+            "Votacion": "1",
+            "Comentario": "Estos de listas están muy buenos, gracias y esperando a aprender mas e implementarlos en nuestro proyecto.\r\nGracias :)",
+            "FechaComentario": "9/9/2015 17:21:13.387",
+            "UserName": "c11094523",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "9",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "13",
+            "Votacion": "1",
+            "Comentario": "Me parece exelente la creacion de este sitio, ya que nos facilita el aprendizaje atravez de los videos que se suben, \r\nmuchas gracias profesor Marcos Soza.",
+            "FechaComentario": "11/9/2015 18:59:58.897",
+            "UserName": "c09096338",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "9",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "14",
+            "Votacion": "1",
+            "Comentario": "Prof. Marcos Zosa Felicidades, Es un sito excelente que apoya el enriquecimiento de la programacion web, el curso nos es necesario para familiarizarnos con la tematica le agradezco su esfuerzo...!!!! ",
+            "FechaComentario": "18/9/2015 15:28:38.75",
+            "UserName": "c11091234",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "9",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "15",
+            "Votacion": "5",
+            "Comentario": "Este curso es de mucha ayuda para nosotros como estudiantes para reforzar los conocimientos ademas de la explicacion entendible que hace el Prof. Marcos Soza y es muy buena la idea de este sitio.",
+            "FechaComentario": "28/9/2015 09:23:22.263",
+            "UserName": "c11091553",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "14",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "16",
+            "Votacion": "3",
+            "Comentario": "MUY BUENOS VÍDEOS, PROFE MUCHAS GRACIAS POR SU DEDICACIÓN PARA ELLOS, NOS SERVIRÁN DE MUCHO ",
+            "FechaComentario": "28/9/2015 13:17:18.993",
+            "UserName": "C09090651",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "10",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "17",
+            "Votacion": "5",
+            "Comentario": "Excelente curso.",
+            "FechaComentario": "2/10/2015 07:55:01.977",
+            "UserName": "c12092664",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "13",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "18",
+            "Votacion": "1",
+            "Comentario": "Agradezco su paciencia profesor marcos por su paciencia de estar creando vídeos la verdad son de muchísima utilidad, ya que obtenemos buena visión y la explicación que realiza al igual que las clases sabe expresarse y llegar al entendimiento estudiantil",
+            "FechaComentario": "5/10/2015 13:32:05.687",
+            "UserName": "c11092620",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "16",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "19",
+            "Votacion": "1",
+            "Comentario": "Cabal, excelentes tutoriales\r\ngraxias por su explicación y dedicacion...",
+            "FechaComentario": "7/10/2015 19:25:41.82",
+            "UserName": "c11090552",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "15",
+            "IdContenido": ""
+        },
+        {
+            "IdComentario": "20",
+            "Votacion": "3",
+            "Comentario": "Muy bueno este curso muchas gracias",
+            "FechaComentario": "28/10/2015 12:43:09.38",
+            "UserName": "c11090563",
+            "TipoComentario": "Curso",
+            "Estado": "1",
+            "IdComentarioPadre": "4",
+            "IdContenido": ""
+        }
+    ]

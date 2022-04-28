@@ -28,22 +28,15 @@ class Entity {
         });
         return Data.map(ent => new this.constructor(ent));
     }
-    FindByProps = async (Param = {}) => {
+    FindByProps = async (paramName, paramValue) => {
         let Data = await import("../../APIDatabase/" + this.ApiMethods.Get + ".json");
-        Data = Data.default.find(ent => {
-            let flag = false;
-            for (const prop in ent) {
-                if (Param[prop] == undefined || Param[prop] == null) {
-                    continue;
-                }
-                const paramV = Param[prop].toString().toUpperCase();
-                if (ent[prop].toString().toUpperCase().includes(paramV.toUpperCase())) {
-                    flag = true;
-                }
-            }
-            return flag;
-        });
-        return (new this.constructor(Data));
+        console.log(Data.default);
+        console.log(paramName, paramValue);
+        const FindObject = Data.default.find(ent => ent[paramName].includes(paramValue));
+        console.log(FindObject);
+        if (FindObject) {
+            return (new this.constructor(FindObject));
+        }        
     }
 }
 export { Entity }

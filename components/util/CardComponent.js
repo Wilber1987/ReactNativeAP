@@ -3,7 +3,7 @@ const CardComponent = (props) => {
     return (<View style={styles.CardStyle}>
         <Text style={styles.Title}>Detalle</Text>
         <Text style={styles.Atribute}>Nombres: {props.data.Nombres}</Text>
-        {/* <Text style={styles.Atribute}>FechaN: {props.data.FechaNacimiento.toString()}</Text> */}
+        {/* <Text style={styles.Atribute}>FechaN: {props.data.FechaNac.toString()}</Text> */}
     </View>);
 }
 export { CardComponent }

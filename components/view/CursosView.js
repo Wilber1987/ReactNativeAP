@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, ActivityIndicator, TextInput } from 'react-native';
 //Model
 import { TblCurso } from "../../model/TblCurso";
-import { TblMatriculadosCursos} from "../../model/TblMatriculadosCursos";
+import { TblMatriculadosCursos } from "../../model/TblMatriculadosCursos";
 //Componentes
 import { CardCursoComp } from "../util/CardCursoComp"
 import { MatriculadosView } from './MatriculadosView';
@@ -12,7 +12,8 @@ class CursosView extends React.Component {
         this.state = {
             isLoading: true,
             Dataset: [],
-            Matriculados: []
+            Matriculados: [],
+            CursoSeleccionado: {}
         }
         this.Curso = new TblCurso();
         this.CargarCursos();
@@ -24,14 +25,16 @@ class CursosView extends React.Component {
             Dataset: Cursos
         });
     }
-    CargarMatriculados = async (param = "") => {
+    CargarMatriculados = async (Curso) => {
         console.log("cargando", param);
         const MatriculadosCurso = new TblMatriculadosCursos();
-        const Matriculados = await MatriculadosCurso.Get(param);
-        console.log(Matriculados);
-        
+        const Matriculados = await MatriculadosCurso.Get(Curso.IdCurso);
+        const UsuariosMat = await Promise.all(Matriculados.map(async (x) => {
+            return await x.TblUsuario.get();
+        }));
         this.setState({
-            Matriculados: Matriculados
+            CursoSeleccionado: Curso,
+            Matriculados: UsuariosMat
         });
     }
     render() {
@@ -49,7 +52,8 @@ class CursosView extends React.Component {
                             function={this.CargarMatriculados}
                             data={curso} />
                 )}
-                <MatriculadosView Dataset= {this.state.Matriculados}></MatriculadosView>
+            <MatriculadosView Data={this.state.CursoSeleccionado}
+                Dataset={this.state.Matriculados}></MatriculadosView>
         </View>;
     }
 }

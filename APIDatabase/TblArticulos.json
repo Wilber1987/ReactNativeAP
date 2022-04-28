@@ -1,0 +1,82 @@
+ [
+        {
+            "IdArticulo": "1",
+            "TituloArticulo": "Portada Página",
+            "ContenidoArticulo": "<div class=\"carousel-inner\">\r\n                    <div class=\"item active\">\r\n                        <img src=\"../images/fade2.jpg\" class=\"img-responsive\" alt=\"\" />\r\n                    </div>\r\n                    <div class=\"item\">\r\n                        <img src=\"../images/fade1.jpg\" class=\"img-responsive\" alt=\"\" />\r\n                    </div>\r\n                    <div class=\"item\">\r\n                        <img src=\"../images/fade3.jpg\" class=\"img-responsive\" alt=\"\" />\r\n                    </div>\r\n                </div>",
+            "FechaCreacion": "23/6/2015 16:44:35",
+            "Publicado": "1",
+            "Destacado": "1",
+            "IdCatArticulo": "1",
+            "FechaPublicacion": "2/10/2015 07:14:15.33"
+        },
+        {
+            "IdArticulo": "2",
+            "TituloArticulo": "Nuestros Servicios",
+            "ContenidoArticulo": "<div><h2>Creación de material multimedia:</h2></div><p style=\"text-align: left;\"><img style=\"float: left;\" alt=\"\" src=\"/images/vector_65_03-128.png\" />Entre los servicios de la USAV-Carazo es brindar&nbsp; espacios organizativos y físicos para la producción y divulgación de contenidos educativos audiovisuales. La USAV-Carazo, tiene como principal tarea ayudar a los docentes de la facultad a realizar material audiovisual que sirva como complemento a la clase que el&nbsp; docente imparte a sus estudiantes.<br /></p>\r\n\r\n<div><h1><br /></h1><h2>Capacitar a docentes y estudiantes:</h2></div>\r\n<p><img alt=\"\" src=\"/images/vector_65_01-128.png\" align=\"left\" />Brindar espacios para que estudiantes de las carreras de Licenciatura/Ingeniería en Ciencias de la Computación y de Ingeniería en Sistemas de Información, pueden realizar pasantías que le permitan adquirir el conocimiento técnico para el desarrollo de productos multimedia y audiovisuales, así como la transmisión de radio y televisión a través de la web.  Ademas de Brindar espacios para que estudiantes de las carreras de Mercadotecnia, Administración Turística y Hotelera y otras titulaciones afines, realicen prácticas acordes al perfil profesional.</p><div><h1><br /></h1><h2>Divulgación de Actividades:</h2></div><p><img alt=\"\" src=\"/images/comment-128.png\" align=\"left\" />Impulsar la realización grabaciones, ediciones y publicaciones, de todas aquellas actividades vinculadas a los tres ejes fundamentales del quehacer universitario: Docencia, Investigación y Extensión. Como forma de divulgar el quehacer universitario utilizando las nuevas tecnologías&nbsp; de información para dar a conocer a nuestra Facultad.<br /></p>",
+            "FechaCreacion": "24/6/2015 11:17:49",
+            "Publicado": "1",
+            "Destacado": "1",
+            "IdCatArticulo": "2",
+            "FechaPublicacion": "26/6/2015 15:18:54.763"
+        },
+        {
+            "IdArticulo": "3",
+            "TituloArticulo": "Búsqueda de videos",
+            "ContenidoArticulo": "<hr /><div style=\"text-align: center;\"><img alt=\"\" src=\"/images/BusquedaHelp.jpg\" /></div><p>Encuentra videos generados en la USAV, solamente escribiendo en la caja de texto de búsqueda en donde encontraras referencias a videos que desese visualizar en nuestra plataforma.<br /></p>",
+            "FechaCreacion": "1/7/2015 08:43:41",
+            "Publicado": "1",
+            "Destacado": "1",
+            "IdCatArticulo": "3",
+            "FechaPublicacion": "1/7/2015 12:01:19.237"
+        },
+        {
+            "IdArticulo": "4",
+            "TituloArticulo": "Inicia Sesión",
+            "ContenidoArticulo": "<hr /><div style=\"text-align: center;\"><img alt=\"\" src=\"/images/LoginAyuda.jpg\" /></div><p>Inicia sesión para poder ver los cursos y contenidos que tenemos preparados para ti. Para poder loguearte en nuestra plataforma necesitas se estudiante de la facultad y ser matriculado por un docente con el cual lleves un curso.<br /></p>",
+            "FechaCreacion": "1/7/2015 08:49:45",
+            "Publicado": "1",
+            "Destacado": "0",
+            "IdCatArticulo": "3",
+            "FechaPublicacion": "1/7/2015 13:22:06.37"
+        },
+        {
+            "IdArticulo": "5",
+            "TituloArticulo": "Cursos Matrículados",
+            "ContenidoArticulo": "<hr /><p></p><div style=\"text-align: center;\"><img alt=\"\" src=\"/images/CursosMatriculados.jpg\" /></div><p></p><p>Cuando seas un estudiante matrículado en nuestra plataforma, al iniciar sesión se te mostrara en el menú principal los cursos en los cuales haz sido matriculado y podras ver todos los videos contenidos en dichos cursos.<br /><br /></p>",
+            "FechaCreacion": "1/7/2015 09:01:05",
+            "Publicado": "1",
+            "Destacado": "0",
+            "IdCatArticulo": "3",
+            "FechaPublicacion": "1/7/2015 11:55:16.84"
+        },
+        {
+            "IdArticulo": "6",
+            "TituloArticulo": "Visualiza los videos",
+            "ContenidoArticulo": "<hr /><div style=\"text-align: center;\"><img alt=\"\" src=\"/images/ReproduccionVideoHelp.jpg\" /></div><p><br /></p><p>Visualiza los videos de nuestra página y mira su información, al momento de ver un video podras ver más videos relacionados con el que estas viendo y tambien podras realizar búsquedas de otros contenidos multimedias.<br /></p>",
+            "FechaCreacion": "1/7/2015 11:25:50",
+            "Publicado": "1",
+            "Destacado": "1",
+            "IdCatArticulo": "3",
+            "FechaPublicacion": "1/7/2015 12:02:31.227"
+        },
+        {
+            "IdArticulo": "7",
+            "TituloArticulo": "Nuestros Cursos",
+            "ContenidoArticulo": "<hr /><div style=\"text-align: center;\"><img alt=\"\" src=\"/images/InformacionCursoAyuda.jpg\" /></div><div style=\"text-align: left;\">Visualiza nuestros cursos en videos, para ello deberas de estar inscrito en uno de ellos. Tambien existen cursos libre a los cuales cualquier persona puede accesar y visualizar su contenido.<br /></div><br />",
+            "FechaCreacion": "1/7/2015 11:26:57",
+            "Publicado": "1",
+            "Destacado": "0",
+            "IdCatArticulo": "3",
+            "FechaPublicacion": "1/7/2015 11:55:05.387"
+        },
+        {
+            "IdArticulo": "8",
+            "TituloArticulo": "Búsqueda de cursos",
+            "ContenidoArticulo": "<hr /><div style=\"text-align: center;\"><img alt=\"\" src=\"/images/BusCursos.jpg\" /></div><div style=\"text-align: left;\">Realiza una búsqueda de cursos en la pestaña cursos, en ella podras ir escribiendo las palabras relacionadas con el curso que te interesa y automáticamente la plataforma te mostrará los resultador de cursos relacionados para eu puedas accesar a ellos.<br /></div>",
+            "FechaCreacion": "1/7/2015 11:48:30",
+            "Publicado": "1",
+            "Destacado": "0",
+            "IdCatArticulo": "3",
+            "FechaPublicacion": "1/7/2015 12:00:49.147"
+        }
+    ]

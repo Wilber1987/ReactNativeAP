@@ -1,0 +1,72 @@
+ [
+        {
+            "IdBloque": "5",
+            "NombreBloque": "Unidad I. Diseño Orientado a Objetos",
+            "Estado": "1",
+            "IdCurso": "4",
+            "OrdenPosicion": "1"
+        },
+        {
+            "IdBloque": "6",
+            "NombreBloque": "Unidad II: Diseño y Modelado de Objeto Basado en UML",
+            "Estado": "1",
+            "IdCurso": "4",
+            "OrdenPosicion": "2"
+        },
+        {
+            "IdBloque": "7",
+            "NombreBloque": "Unidad III: Desarrollo de software Orientado a Objetos",
+            "Estado": "1",
+            "IdCurso": "4",
+            "OrdenPosicion": "3"
+        },
+        {
+            "IdBloque": "8",
+            "NombreBloque": "Unidad I: Introducción a Entity Framework",
+            "Estado": "1",
+            "IdCurso": "5",
+            "OrdenPosicion": "1"
+        },
+        {
+            "IdBloque": "9",
+            "NombreBloque": "Unidad II: El lenguaje de consulta integrado (LINQ)",
+            "Estado": "1",
+            "IdCurso": "5",
+            "OrdenPosicion": "2"
+        },
+        {
+            "IdBloque": "14",
+            "NombreBloque": "Unidad I: Introducción a Sony Vega PRO",
+            "Estado": "1",
+            "IdCurso": "6",
+            "OrdenPosicion": "1"
+        },
+        {
+            "IdBloque": "15",
+            "NombreBloque": "Unidad I:Introducción a Didácticas especificas",
+            "Estado": "1",
+            "IdCurso": "7",
+            "OrdenPosicion": "1"
+        },
+        {
+            "IdBloque": "16",
+            "NombreBloque": "Introdución a la planificación estratégica",
+            "Estado": "1",
+            "IdCurso": "9",
+            "OrdenPosicion": "1"
+        },
+        {
+            "IdBloque": "17",
+            "NombreBloque": "Unidad III: Uso de Entity Framework y LINQ en formularios ASP NET",
+            "Estado": "1",
+            "IdCurso": "5",
+            "OrdenPosicion": "3"
+        },
+        {
+            "IdBloque": "18",
+            "NombreBloque": "Unidad VI: Usuarios y Roles en ASP.Net",
+            "Estado": "1",
+            "IdCurso": "5",
+            "OrdenPosicion": "4"
+        }
+    ]

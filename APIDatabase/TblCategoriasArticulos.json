@@ -1,0 +1,17 @@
+ [
+        {
+            "IdCatArticulo": "1",
+            "NombreCatArticulo": "Portada",
+            "Estado": "1"
+        },
+        {
+            "IdCatArticulo": "2",
+            "NombreCatArticulo": "Servicios",
+            "Estado": "1"
+        },
+        {
+            "IdCatArticulo": "3",
+            "NombreCatArticulo": "Ayuda",
+            "Estado": "1"
+        }
+    ]

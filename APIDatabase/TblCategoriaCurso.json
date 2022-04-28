@@ -1,0 +1,37 @@
+[
+        {
+            "IdCatCurso": "1",
+            "NombreCatCurso": "Programación",
+            "Estado": "1"
+        },
+        {
+            "IdCatCurso": "2",
+            "NombreCatCurso": "Diseño Gráfico",
+            "Estado": "1"
+        },
+        {
+            "IdCatCurso": "3",
+            "NombreCatCurso": "Diseño Web",
+            "Estado": "1"
+        },
+        {
+            "IdCatCurso": "5",
+            "NombreCatCurso": "Análisis y Diseño de Sistemas",
+            "Estado": "1"
+        },
+        {
+            "IdCatCurso": "6",
+            "NombreCatCurso": "Edición de Videos",
+            "Estado": "1"
+        },
+        {
+            "IdCatCurso": "7",
+            "NombreCatCurso": "Didácticas",
+            "Estado": "1"
+        },
+        {
+            "IdCatCurso": "8",
+            "NombreCatCurso": "Planificación Estratégica",
+            "Estado": "1"
+        }
+    ]

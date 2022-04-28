@@ -35,7 +35,7 @@ class CursosView extends React.Component {
         });
     }
     render() {
-        return (<View style={{ flex: 5 }}>
+        return <View style={{ flex: 5 }}>
             <Text>Cursos View</Text>
             <TextInput style={{ padding: 10, margin: 10 }}
                 placeholder='Buscar'
@@ -50,7 +50,7 @@ class CursosView extends React.Component {
                             data={curso} />
                 )}
                 <MatriculadosView Dataset= {this.state.Matriculados}></MatriculadosView>
-        </View>)
+        </View>;
     }
 }
 export { CursosView }

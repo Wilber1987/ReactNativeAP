@@ -1,4 +1,5 @@
 import { Entity } from "./core/Entity";
+import { TblCurso } from "./TblCurso";
 import { TblUsuario } from "./TblUsuario";
 
 class TblMatriculadosCursos extends Entity {
@@ -18,12 +19,21 @@ class TblMatriculadosCursos extends Entity {
         val : this,
         async get() {
             const usuario = new TblUsuario();
-            console.log(this);
             return await usuario.FindByProps("Carnet", this.val.Carnet);
         },
         set(newValue) {
             this.val = newValue;
         }
     };
+    TblCurso = {
+        val: this,
+        async get() {
+            const curso = new TblCurso();
+            return await curso.FindByProps("IdCurso", this.val.IdCurso);
+        },
+        set(newValue) {
+            this.val = newValue;
+        }
+    }
 }
 export { TblMatriculadosCursos }

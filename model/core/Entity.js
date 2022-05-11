@@ -30,10 +30,7 @@ class Entity {
     }
     FindByProps = async (paramName, paramValue) => {
         let Data = await import("../../APIDatabase/" + this.ApiMethods.Get + ".json");
-        console.log(Data.default);
-        console.log(paramName, paramValue);
         const FindObject = Data.default.find(ent => ent[paramName].includes(paramValue));
-        console.log(FindObject);
         if (FindObject) {
             return (new this.constructor(FindObject));
         }        

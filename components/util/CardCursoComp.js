@@ -6,7 +6,7 @@ const CardCursoComp = (props) => {
         {/* <Text style={styles.Resumen}>Resumen: {props.data.ResumenCurso}</Text> */}
         <Text style={styles.Atribute}>Fecha: {props.data.FechaCreacion}</Text>
         <Button title="Ver Matriculados" onPress={() => {
-            props.function(props.data.IdCurso);
+            props.CargarMatriculados(props.data);
         }}> </Button>
     </View>);
 }

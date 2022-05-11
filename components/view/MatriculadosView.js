@@ -8,12 +8,12 @@ class MatriculadosView extends React.Component {
   } 
   render() {
     return <View>
-      <Text>Persons View</Text>
-      <TextInput placeholder='Buscar...' onChangeText={Value => this.ChargePersons(Value)}/>  
+      <Text>Persons View</Text> 
       {
+        this.props.Dataset ?
         this.props.Dataset.map(p => {
           return (<CardComponent key={p.Carnet} data={p} />)
-        })
+        }): <Text>No Data</Text> 
       }
     </View>;
   }

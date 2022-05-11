@@ -15,7 +15,6 @@ const styles = StyleSheet.create({
     CardStyle: {
         flex: 4,
         backgroundColor: '#999',
-        width: "80%",
         padding: 20,
         margin: 10
     }, Title: {

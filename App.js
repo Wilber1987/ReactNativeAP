@@ -4,26 +4,23 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 //Views 
-import { MatriculadosView } from './components/view/MatriculadosView';
-import { CursosView2 } from './components/view/CursosView2';
+import { Login } from './components/view/Login';
+import { Main } from './components/view/Main';
 
 export default function App() {
   return (
-    <View >
-      <NavigationContainer style={styles.container}>
-        <Stack.Navigator>
-          <Stack.Screen  name="Cursos"  component={CursosView2}  options={{ title: 'cursos' }}/>
-          <Stack.Screen  name="Matriculados"  component={MatriculadosView}  options={{ title: 'matriculados' }}/>
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{
+            headerShown: false
+          }} >
+          <Stack.Screen  name="Login"  component={Login}  options={{ title: 'Login' }}/>
+          <Stack.Screen  name="Main"  component={Main}  options={{ title: 'Main' }}/>
         </Stack.Navigator>
       </NavigationContainer>
-    </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1
   }
 });

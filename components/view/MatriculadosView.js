@@ -1,21 +1,34 @@
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator , TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-native';
 import { CardComponent } from '../util/CardComponent';
 class MatriculadosView extends React.Component {
   constructor(props) {
     super();
     this.props = props;
-  } 
+    console.log(this.props);
+    this.Dataset = this.props.route.params.Dataset;
+  }
   render() {
-    return <View>
-      <Text>Persons View</Text> 
+    return <ScrollView style={styles.container}>
+      <Text style={styles.Title}>Persons View</Text>
+      <Button title="<- Volver" onPress={() => {
+        this.props.navigation.navigate('CursosView');
+      }} />
       {
-        this.props.Dataset ?
-        this.props.Dataset.map(p => {
-          return (<CardComponent key={p.Carnet} data={p} />)
-        }): <Text>No Data</Text> 
+        this.Dataset ?
+          this.Dataset.map(p => {
+            return (<CardComponent key={p.Carnet} data={p} />)
+          }) : <Text>No Data</Text>
       }
-    </View>;
+    </ScrollView>;
   }
 }
 export { MatriculadosView }
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    textAlign: "center"
+  }, Title: {
+    fontSize: 26
+  }
+});

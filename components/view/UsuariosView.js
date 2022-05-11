@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator, TextInput } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, TextInput, ScrollView } from 'react-native';
 import { CardComponent } from '../util/CardComponent';
 
 import { TblUsuario } from "../../model/TblUsuario";
@@ -22,7 +22,7 @@ class UsuariosView extends React.Component {
     });
   }
   render() {
-    return <View>
+    return <ScrollView>
       <Text>Persons View</Text>
       <TextInput placeholder='Buscar...' onChangeText={Value => this.ChargePersons(Value)} />
       {this.state.isLoading ?
@@ -31,7 +31,7 @@ class UsuariosView extends React.Component {
           return (<CardComponent key={p.Carnet} data={p} />)
         })
       }
-    </View>;
+    </ScrollView>;
   }
 }
 export { UsuariosView }

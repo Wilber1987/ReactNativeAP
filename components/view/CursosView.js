@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator, TextInput } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, TextInput, ScrollView } from 'react-native';
 //Model
 import { TblCurso } from "../../model/TblCurso";
 import { TblMatriculadosCursos } from "../../model/TblMatriculadosCursos";
@@ -28,7 +28,7 @@ class CursosView extends React.Component {
         });
     }
     CargarMatriculados = async (Curso) => {
-        console.log("cargando", param);
+        console.log("cargando", Curso);
         const MatriculadosCurso = new TblMatriculadosCursos();
         const Matriculados = await MatriculadosCurso.Get(Curso.IdCurso);
         const UsuariosMat = await Promise.all(Matriculados.map(async (x) => {
@@ -38,12 +38,13 @@ class CursosView extends React.Component {
             CursoSeleccionado: Curso,
             Matriculados: UsuariosMat
         });
+        this.props.navigation.navigate('MatriculadosView', { Dataset: this.state.Matriculados });
     }
     render() {
-        return <View style={{ flex: 5 }}>
-            <Text>Cursos View</Text>
-            <TextInput style={{ padding: 10, margin: 10 }}
-                placeholder='Buscar dd ff'
+        return <ScrollView style={styles.container}>
+            <Text style={styles.Title}>Cursos View</Text>
+            <TextInput style={ styles.Input}
+                placeholder='Buscar...'
                 onChangeText={val => this.CargarCursos(val)}></TextInput>
             {this.state.isLoading ?
                 <ActivityIndicator /> :
@@ -51,10 +52,24 @@ class CursosView extends React.Component {
                     curso =>
                         <CardCursoComp
                             key={curso.IdCurso}
-                            function={this.CargarMatriculados}
+                            CargarMatriculados={this.CargarMatriculados}
                             data={curso} />
                 )}
-        </View>;
+        </ScrollView>;
     }
 }
 export { CursosView }
+const styles = StyleSheet.create({
+    container: {
+        padding: 20,
+        textAlign: "center"
+    }, Title: {
+        fontSize: 26
+    }, Input: {
+        padding: 10, 
+        margin: 10,
+        borderColor: "#999", 
+        borderWidth: 2,
+        borderRadius: 10
+    }
+});

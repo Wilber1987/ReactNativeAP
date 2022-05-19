@@ -6,6 +6,7 @@ class FrmContenido extends React.Component {
     constructor(props) {
         super();
         this.props = props;
+        this.Bloque =  this.props.route.params.Bloque;
         this.Contenido = new TblContenidos();
     }
     render() {
@@ -20,8 +21,9 @@ class FrmContenido extends React.Component {
                 onChangeText={val => this.Contenido.Nombre = val}></TextInput>
                
             {/** OPCIONES */}
-            <Button title="Guardar" onPress={() => {
-                
+            <Button title="Guardar" onPress={async () => {               
+                await this.props.route.params.GuardarContenido(this.Bloque, this.Contenido);
+                await this.props.route.params.actualizarContenidos();
                 this.props.navigation.navigate("DetalleCursoView");
             }} />
             <Button title="Cancelar" onPress={() => {

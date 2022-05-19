@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
 import { TblBloqueCurso } from '../../model/TblBloqueCurso';
+import { TblContenidos } from '../../model/TblContenidos';
 import { CardComponent } from '../util/CardComponent';
 import { ContenidosBloque } from '../util/ContenidosBloque';
 class DetalleCursoView extends React.Component {
@@ -12,15 +13,20 @@ class DetalleCursoView extends React.Component {
       Dataset: this.props.route.params.Dataset ?? []
     }
   }
-  NuevoContenido = async () => {
-    this.props.navigation.navigate('FrmContenido', { Dataset: this.Curso });
+  NuevoContenido = async (Bloque = (new TblBloqueCurso()), actualizarContenidos) => {
+    this.props.navigation.navigate('FrmContenido', {
+      Bloque: Bloque,
+      GuardarContenido: this.GuardarContenido,
+      actualizarContenidos: actualizarContenidos
+    });
   }
-  GuardarContenido = async (Bloque = (new TblBloqueCurso()), Contenido=(new TblContenidos())) => {
-    const bloque = this.state.Dataset.filter(b => b.IdBloque = Bloque.IdBloque);
-    setState({
-      Dataset: this.state.Dataset
+  GuardarContenido = async (Bloque = (new TblBloqueCurso()), Contenido = (new TblContenidos())) => {
+    Contenido.IdBloque = Bloque.IdBloque;
+    await Contenido.Save();
+    const Bloques = await this.state.Curso.TblBloqueCurso.get();
+    this.setState({
+      Dataset: Bloques
     })
-    this.props.navigation.navigate('FrmContenido', { Dataset: this.Curso });
   }
   render() {
     return <ScrollView style={{ padding: 10 }}>

@@ -24,7 +24,7 @@ class ContenidosBloque extends React.Component {
         return (<View style={styles.CardStyle}>
             <Text style={styles.Title}>Contenidos</Text>
             <Button title="+" onPress={() => {
-                this.props.NuevoContenido();
+                this.props.NuevoContenido(this.TblBloqueCurso, this.cargarContenidos);
             }}></Button>
             {this.state.isLoading ?
                 <ActivityIndicator size="large" color="#0000ff" /> :

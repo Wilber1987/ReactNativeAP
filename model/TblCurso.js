@@ -1,3 +1,5 @@
+import { TblBloqueCurso } from "./TblBloqueCurso";
+
 class TblCurso {
     constructor(curso =  {
         "IdCurso": undefined,
@@ -27,6 +29,16 @@ class TblCurso {
     FechaInicio = "";
     Finalizado = "1";
     NumVisitas = "481";
+    TblBloqueCurso = {
+        val: this,
+        async get() {
+            const Bloques = new TblBloqueCurso();
+            return await Bloques.GetByProps("IdCurso", this.val.IdCurso);
+        },
+        set(newValue) {
+            this.val = newValue;
+        }
+    }
     Get = async (param)=>{
         const Cursos = await import("../APIDatabase/TblCurso.json");
         const CursosFilt = Cursos.default.filter(c => 

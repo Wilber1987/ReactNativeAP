@@ -5,6 +5,9 @@ const CardCursoComp = (props) => {
         <Text style={styles.Atribute}>Nombres: {props.data.NombreCurso}</Text>
         {/* <Text style={styles.Resumen}>Resumen: {props.data.ResumenCurso}</Text> */}
         <Text style={styles.Atribute}>Fecha: {props.data.FechaCreacion}</Text>
+        <Button title="Ver Detalle" onPress={() => {
+            props.CargarBloques(props.data);
+        }}> </Button>
         <Button title="Ver Matriculados" onPress={() => {
             props.CargarMatriculados(props.data);
         }}> </Button>
@@ -16,7 +19,8 @@ const styles = StyleSheet.create({
         flex: 4,
         backgroundColor: '#999',
         padding: 20,
-        margin: 10
+        margin: 20,
+        borderRadius: 10
     }, Title: {
         color: "#fff",
         fontSize: 26

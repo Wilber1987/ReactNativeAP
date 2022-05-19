@@ -28,6 +28,12 @@ class Entity {
         });
         return Data.map(ent => new this.constructor(ent));
     }
+
+    GetByProps = async (paramName, paramValue) => {
+        let Data = await import("../../APIDatabase/" + this.ApiMethods.Get + ".json");
+        Data = Data.default.filter(ent => ent[paramName].includes(paramValue));
+        return Data.map(ent => new this.constructor(ent));       
+    }
     FindByProps = async (paramName, paramValue) => {
         let Data = await import("../../APIDatabase/" + this.ApiMethods.Get + ".json");
         const FindObject = Data.default.find(ent => ent[paramName].includes(paramValue));

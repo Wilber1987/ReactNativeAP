@@ -1,5 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Text, Alert, ActivityIndicator, TextInput, ScrollView } from 'react-native';
+import { TblBloqueCurso } from '../../model/TblBloqueCurso';
 //Model
 import { TblCurso } from "../../model/TblCurso";
 import { TblMatriculadosCursos } from "../../model/TblMatriculadosCursos";
@@ -37,18 +38,13 @@ class CursosView extends React.Component {
         });
         this.props.navigation.navigate('MatriculadosView', { Dataset: this.state.Matriculados });
     }
-    CargarBloques = async (Curso = (new TblCurso())) => {
-        const Bloques = await Curso.TblBloqueCurso.get();
-        this.setState({
-            CursoSeleccionado: Curso,
-            Bloques: Bloques
+    CargarBloques = async (Curso = (new TblCurso())) => {        
+        const Bloques = await Curso.TblBloqueCurso.get();   
+        this.props.navigation.navigate('DetalleCursoView', {
+            Curso: Curso,
+            Dataset: Bloques
         });
-        this.props.navigation.navigate('DetalleCursoView',
-            {
-                Curso: Curso,
-                Dataset: this.state.Bloques
-            });
-    }    
+    }
     render() {
         return <ScrollView style={{}}>
             <Text style={styles.Title}>Cursos View</Text>

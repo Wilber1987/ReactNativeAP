@@ -8,6 +8,9 @@ class TblBloqueCurso extends Entity{
             this[prop] = props[prop];
         }
     }
+    ApiMethods = {
+        Get: "TblBloqueCurso",
+    }
     IdBloque = "6";
     NombreBloque = "Unidad I = Diseño y Modelado de Objeto Basado en UML";
     Estado = "1";

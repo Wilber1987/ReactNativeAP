@@ -9,6 +9,9 @@ class TblMatriculadosCursos extends Entity {
             this[prop] = props[prop];
         }
     }
+    ApiMethods = {
+        Get: "TblMatriculadosCursos",
+    }
     IdMatricula = "4";
     IdCurso = "5";
     Carnet = "11327";

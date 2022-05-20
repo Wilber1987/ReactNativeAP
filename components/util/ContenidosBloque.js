@@ -1,7 +1,6 @@
-import { StyleSheet, Text, View, ScrollView, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, Button, ActivityIndicator } from 'react-native';
 import React from 'react';
 import { TblBloqueCurso } from '../../model/TblBloqueCurso';
-import { Button } from 'react-native-web';
 class ContenidosBloque extends React.Component {
     constructor(props) {
         super();

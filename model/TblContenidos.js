@@ -7,6 +7,9 @@ class TblContenidos extends Entity{
             this[prop] = props[prop];
         }
     }
+    ApiMethods = {
+        Get: "TblContenidos",
+    }
     IdContenido= "37";
     Nombre= "7 PELO CORTO";
     DuracionVideo= "";

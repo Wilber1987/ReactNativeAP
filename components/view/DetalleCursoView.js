@@ -36,11 +36,11 @@ class DetalleCursoView extends React.Component {
       }} />
       {
         this.state.Dataset.map(p => {
-          return (<View key={p.IdBloque}>
+          return (<View>
             <Text>{p.NombreBloque}</Text>
-            <ContenidosBloque Curso={this.state.Curso}
+            <ContenidosBloque  key={p.IdBloque} Curso={this.state.Curso}
               NuevoContenido={this.NuevoContenido}
-              TblBloqueCurso={p}></ContenidosBloque>
+              TblBloqueCurso={p}></ContenidosBloque> 
           </View>)
         })
       }

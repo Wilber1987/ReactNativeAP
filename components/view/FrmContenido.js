@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
-import { TextInput } from 'react-native-web';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { TblContenidos } from '../../model/TblContenidos';
 class FrmContenido extends React.Component {
     constructor(props) {

@@ -1,4 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Alert } from 'react-native';
+import { ApiDataBase } from './ApiDataBase';
 class Entity {
     constructor(props) {
         for (const prop in props) {
@@ -53,18 +55,15 @@ class Entity {
     }
     async TakeData() {
         let Data = [];
-        //const DataBase = localStorage.getItem(this.ApiMethods.Get);
         const DataBase = await AsyncStorage.getItem('@' + this.ApiMethods.Get);
-        //console.log(DataBase);
-        if (DataBase == null) {
+        //console.log(DataBase);       
+        if (DataBase == null || (DataBase == null && DataBase.__proto__ != Array.prototype)) {  
             //Data = await import("../../APIDatabase/" + this.ApiMethods.Get + ".json");
-            Data = await fetch("../../APIDatabase/" + this.ApiMethods.Get + ".json");
-            console.log(Data);  
-            console.log(Data.json); 
-            Data = await Data.json();
-            console.log(Data);
-            //Data = require("../../APIDatabase/" + this.ApiMethods.Get + ".json");
-            Data = Data.default;
+            //Data = Data.default;            
+            //REQUIRE
+            //Data = require("../../APIDatabase/TblCurso.json");
+            Data = ApiDataBase[this.ApiMethods.Get];            
+            //-----> ALMACENAMIENTO
             //localStorage.setItem(this.ApiMethods.Get, JSON.stringify(Data));
             await AsyncStorage.setItem('@' + this.ApiMethods.Get, JSON.stringify(Data));
         } else {

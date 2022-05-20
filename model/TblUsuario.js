@@ -10,7 +10,10 @@ class TblUsuario extends Entity {
         for (const prop in usuario) {
             this[prop] = usuario[prop];
         }
-    }    
+    }  
+    ApiMethods = {
+        Get: "TblUsuario",
+    }  
     Carnet = "10001";
     Nombres = "MARITZA";
     RutaFotoUsuario = "~/images/profile.png";

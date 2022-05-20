@@ -8,6 +8,9 @@ class TblCurso extends Entity{
             this[prop] = curso[prop];
         }
     }
+    ApiMethods = {
+        Get: "TblCurso",
+    }
     IdCurso = "4";
     NombreCurso = "Diseño de Sistemas Orientado a Objetos";
     RutaImagenCurso = "";

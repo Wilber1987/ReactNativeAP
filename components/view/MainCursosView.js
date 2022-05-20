@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 export default function MainCursosView() {
   return (
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="CursosView2" component={CursosView}  />
+        <Stack.Screen name="CursosView" component={CursosView}  />
         <Stack.Screen name="MatriculadosView" component={MatriculadosView} />
         <Stack.Screen name="DetalleCursoView" component={DetalleCursoView} />
         <Stack.Screen name="FrmContenido" component={FrmContenido} />

@@ -1,19 +1,9 @@
+import { Entity } from "./core/Entity";
 import { TblBloqueCurso } from "./TblBloqueCurso";
 
-class TblCurso {
-    constructor(curso =  {
-        "IdCurso": undefined,
-        "NombreCurso": undefined,
-        "RutaImagenCurso": undefined,
-        "FechaCreacion": undefined,
-        "Estado": undefined,
-        "PassCurso": undefined,
-        "ResumenCurso": undefined,
-        "IdCreadorVideo": undefined,
-        "FechaInicio": undefined,
-        "Finalizado": undefined,
-        "NumVisitas": undefined
-    }){
+class TblCurso extends Entity{
+    constructor(curso =  {}){
+        super();
         for (const prop in curso) {
             this[prop] = curso[prop];
         }
@@ -38,12 +28,6 @@ class TblCurso {
         set(newValue) {
             this.val = newValue;
         }
-    }
-    Get = async (param)=>{
-        const Cursos = await import("../APIDatabase/TblCurso.json");
-        const CursosFilt = Cursos.default.filter(c => 
-            c.NombreCurso.toUpperCase().includes(param.toUpperCase()))
-        return CursosFilt.map(c => (new TblCurso(c)));
     }
 }
 export {TblCurso}

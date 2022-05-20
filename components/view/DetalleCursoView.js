@@ -32,7 +32,7 @@ class DetalleCursoView extends React.Component {
     return <ScrollView style={{ padding: 10 }}>
       <Text style={styles.Title}>Bloques View</Text>
       <Button title="<- Regresar" onPress={() => {
-        this.props.navigation.navigate("CursosView2");
+        this.props.navigation.navigate("CursosView");
       }} />
       {
         this.state.Dataset.map(p => {

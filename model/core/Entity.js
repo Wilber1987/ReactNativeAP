@@ -55,8 +55,7 @@ class Entity {
     }
     async TakeData() {
         let Data = [];
-        const DataBase = await AsyncStorage.getItem('@' + this.ApiMethods.Get);
-        //console.log(DataBase);       
+        const DataBase = await AsyncStorage.getItem('@' + this.ApiMethods.Get);      
         if (DataBase == null || (DataBase == null && DataBase.__proto__ != Array.prototype)) {  
             //Data = await import("../../APIDatabase/" + this.ApiMethods.Get + ".json");
             //Data = Data.default;            

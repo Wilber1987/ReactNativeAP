@@ -6,6 +6,7 @@ import { CursosView } from './CursosView';
 import { MatriculadosView } from './MatriculadosView';
 import { DetalleCursoView } from './DetalleCursoView';
 import { FrmContenido } from './FrmContenido';
+import { NewCursoFrm } from './NewCursoFrm';
 const Stack = createNativeStackNavigator();
 //Views 
 
@@ -16,6 +17,7 @@ export default function MainCursosView() {
         <Stack.Screen name="MatriculadosView" component={MatriculadosView} />
         <Stack.Screen name="DetalleCursoView" component={DetalleCursoView} />
         <Stack.Screen name="FrmContenido" component={FrmContenido} />
+        <Stack.Screen name="NewCursoFrm" component={NewCursoFrm} />
       </Stack.Navigator>
   );
 }

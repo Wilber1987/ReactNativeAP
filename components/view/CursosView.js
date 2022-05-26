@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, Alert, ActivityIndicator, TextInput, ScrollView } from 'react-native';
+import { StyleSheet, Button, Text, Alert, ActivityIndicator, TextInput, ScrollView } from 'react-native';
 import { TblBloqueCurso } from '../../model/TblBloqueCurso';
 //Model
 import { TblCurso } from "../../model/TblCurso";
@@ -38,8 +38,8 @@ class CursosView extends React.Component {
         });
         this.props.navigation.navigate('MatriculadosView', { Dataset: this.state.Matriculados });
     }
-    CargarBloques = async (Curso = (new TblCurso())) => {        
-        const Bloques = await Curso.TblBloqueCurso.get();   
+    CargarBloques = async (Curso = (new TblCurso())) => {
+        const Bloques = await Curso.TblBloqueCurso.get();
         this.props.navigation.navigate('DetalleCursoView', {
             Curso: Curso,
             Dataset: Bloques
@@ -48,9 +48,12 @@ class CursosView extends React.Component {
     render() {
         return <ScrollView style={{}}>
             <Text style={styles.Title}>Cursos View</Text>
-            <TextInput style={{ padding: 10, margin: 10 }}
+            <TextInput style={{ padding: 10, margin: 10, borderWidth: 2 }}
                 placeholder='Buscar'
                 onChangeText={val => this.CargarCursos(val)}></TextInput>
+            <Button title="Nuevo Curso" onPress={() => {
+                this.props.navigation.navigate("NewCursoFrm");
+            }} />
             {this.state.isLoading ?
                 <ActivityIndicator /> :
                 this.state.Dataset.map(

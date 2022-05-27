@@ -11,19 +11,23 @@ class TblBloqueCurso extends Entity{
     ApiMethods = {
         Get: "TblBloqueCurso",
     }
-    IdBloque = "6";
-    NombreBloque = "Unidad I = Diseño y Modelado de Objeto Basado en UML";
-    Estado = "1";
-    IdCurso = "4";
-    OrdenPosicion = "2";
+    IdBloque = "";
+    NombreBloque = "";
+    Estado = "";
+    IdCurso = "";
+    OrdenPosicion = "";
     TblContenidos = {
-        val: this,
+        val: this.IdBloque, Data: [],
         async get() {
-            const Contenidos = new TblContenidos();
-            return await Contenidos.GetByProps("IdBloque", this.val.IdBloque);
+            if (this.val.IdBloque != "") {
+                const Contenidos = new TblContenidos();
+                return await Contenidos.GetByProps("IdBloque", this.val);
+            } else {
+                return this.Data;
+            }            
         },
         set(newValue) {
-            this.val = newValue;
+            this.Data = newValue;
         }
     }
 }

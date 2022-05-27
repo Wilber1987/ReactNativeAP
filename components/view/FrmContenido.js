@@ -22,8 +22,7 @@ class FrmContenido extends React.Component {
             {/** OPCIONES */}
             <Button title="Guardar" onPress={async () => {               
                 await this.props.route.params.GuardarContenido(this.Bloque, this.Contenido);
-                await this.props.route.params.actualizarContenidos();
-                this.props.navigation.navigate("DetalleCursoView");
+                await this.props.route.params.actualizarContenidos();                
             }} />
             <Button title="Cancelar" onPress={() => {
                 this.props.navigation.navigate("DetalleCursoView");

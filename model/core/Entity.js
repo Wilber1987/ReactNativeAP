@@ -47,8 +47,9 @@ class Entity {
             return (new this.constructor(FindObject));
         }
     }
-    Save = async ()=>{
+    Save = async (IdEntity = "id")=>{
         let Data = await this.Get();
+        this[IdEntity] = Data.length + 1;
         Data.push(this);
         await this.SaveData(Data);
         return true;
@@ -71,7 +72,7 @@ class Entity {
         return Data;
     }
     SaveData = async (Data)=>{
-        //localStorage.setItem(this.ApiMethods.Get, JSON.stringify(Data));
+        //localStorage.setItem(this.ApiMethods.Get, JSON.stringify(Data));       
         await AsyncStorage.setItem('@' + this.ApiMethods.Get, JSON.stringify(Data));
     }
 }

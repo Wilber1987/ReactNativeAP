@@ -17,7 +17,7 @@ class ContenidosBloque extends React.Component {
         this.setState({
             isLoading: false,
             Contenidos: Contenidos
-        });
+        });        
     }
     render() {
         return (<View style={styles.CardStyle}>

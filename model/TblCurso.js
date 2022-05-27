@@ -23,10 +23,10 @@ class TblCurso extends Entity{
     Finalizado = "1";
     NumVisitas = "481";
     TblBloqueCurso = {
-        val: this,
+        val: this.IdCurso,
         async get() {
             const Bloques = new TblBloqueCurso();
-            return await Bloques.GetByProps("IdCurso", this.val.IdCurso);
+            return await Bloques.GetByProps("IdCurso", this.val);
         },
         set(newValue) {
             this.val = newValue;

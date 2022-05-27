@@ -22,11 +22,12 @@ class DetalleCursoView extends React.Component {
   }
   GuardarContenido = async (Bloque = (new TblBloqueCurso()), Contenido = (new TblContenidos())) => {
     Contenido.IdBloque = Bloque.IdBloque;
-    await Contenido.Save();
+    await Contenido.Save("IdContenido");
     const Bloques = await this.state.Curso.TblBloqueCurso.get();
     this.setState({
       Dataset: Bloques
-    })
+    });
+    this.props.navigation.navigate("DetalleCursoView");
   }
   render() {
     return <ScrollView style={{ padding: 10 }}>

@@ -17,6 +17,7 @@ class NewCursoFrm extends React.Component {
 
     }
     GuardarBloque = async (Bloque = (new TblBloqueCurso())) => {
+        console.log(Bloque);
         this.state.Bloques.push(Bloque);
         this.setState({
             Bloques: this.state.Bloques

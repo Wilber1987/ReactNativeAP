@@ -19,7 +19,7 @@ class TblBloqueCurso extends Entity{
     TblContenidos = {
         val: this.IdBloque, Data: [],
         async get() {
-            if (this.val.IdBloque != "") {
+            if (this.val != "") {
                 const Contenidos = new TblContenidos();
                 return await Contenidos.GetByProps("IdBloque", this.val);
             } else {

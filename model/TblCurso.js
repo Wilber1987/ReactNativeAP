@@ -1,8 +1,8 @@
 import { Entity } from "./core/Entity";
 import { TblBloqueCurso } from "./TblBloqueCurso";
 
-class TblCurso extends Entity{
-    constructor(curso =  {}){
+class TblCurso extends Entity {
+    constructor(curso = {}) {
         super();
         for (const prop in curso) {
             this[prop] = curso[prop];
@@ -11,26 +11,31 @@ class TblCurso extends Entity{
     ApiMethods = {
         Get: "TblCurso",
     }
-    IdCurso = "4";
-    NombreCurso = "Diseño de Sistemas Orientado a Objetos";
+    IdCurso = "";
+    NombreCurso = "";
     RutaImagenCurso = "";
-    FechaCreacion = "6/8/2015 12:57:20.647";
-    Estado = "1";
+    FechaCreacion = "";
+    Estado = "";
     PassCurso = "";
-    ResumenCurso = "Resumen";
-    IdCreadorVideo = "1";
+    ResumenCurso = "";
+    IdCreadorVideo = "";
     FechaInicio = "";
-    Finalizado = "1";
-    NumVisitas = "481";
+    Finalizado = "";
+    NumVisitas = "";
     TblBloqueCurso = {
-        val: this.IdCurso,
-        async get() {
-            const Bloques = new TblBloqueCurso();
-            return await Bloques.GetByProps("IdCurso", this.val);
+        val: this.IdCurso, Data: [],
+        async get() {    
+            console.log(this.val);        
+            if (this.val != "") {               
+                const Bloques = new TblBloqueCurso();
+                return await Bloques.GetByProps("IdCurso", this.val);
+            } else {
+                return this.Data;
+            }
         },
         set(newValue) {
             this.val = newValue;
         }
     }
 }
-export {TblCurso}
+export { TblCurso }

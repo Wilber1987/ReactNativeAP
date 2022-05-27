@@ -39,7 +39,9 @@ class CursosView extends React.Component {
         this.props.navigation.navigate('MatriculadosView', { Dataset: this.state.Matriculados });
     }
     CargarBloques = async (Curso = (new TblCurso())) => {
+        console.log(Curso);
         const Bloques = await Curso.TblBloqueCurso.get();
+        console.log(Bloques);
         this.props.navigation.navigate('DetalleCursoView', {
             Curso: Curso,
             Dataset: Bloques

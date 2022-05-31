@@ -23,18 +23,16 @@ class TblCurso extends Entity {
     Finalizado = "";
     NumVisitas = "";
     TblBloqueCurso = {
-        val: this.IdCurso, Data: [],
-        async get() {    
-            console.log(this.val);        
-            if (this.val != "") {               
+        val: [],
+        get: async ()=> {
+            if (this.IdCurso != "") {
                 const Bloques = new TblBloqueCurso();
-                return await Bloques.GetByProps("IdCurso", this.val);
-            } else {
-                return this.Data;
-            }
-        },
-        set(newValue) {
-            this.val = newValue;
+                return await Bloques.GetByProps("IdCurso", this.IdCurso);
+            }else{
+                return this.TblBloqueCurso.val;
+            }            
+        }, set(newValue) {
+            this.TblBloqueCurso.val = newValue;
         }
     }
 }

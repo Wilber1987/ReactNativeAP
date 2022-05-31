@@ -37,12 +37,12 @@ class Entity {
 
     GetByProps = async (paramName, paramValue) => {
         let Data = await this.TakeData();
-        Data = Data.filter(ent => ent[paramName].includes(paramValue));
+        Data = Data.filter(ent => ent[paramName].toString().includes(paramValue.toString()));
         return Data.map(ent => new this.constructor(ent));
     }
     FindByProps = async (paramName, paramValue) => {
         let Data = await this.TakeData();
-        const FindObject = Data.find(ent => ent[paramName].includes(paramValue));
+        const FindObject = Data.find(ent => ent[paramName].toString().includes(paramValue.toString()));
         if (FindObject) {
             return (new this.constructor(FindObject));
         }
@@ -73,7 +73,14 @@ class Entity {
     }
     SaveData = async (Data)=>{
         //localStorage.setItem(this.ApiMethods.Get, JSON.stringify(Data));       
-        await AsyncStorage.setItem('@' + this.ApiMethods.Get, JSON.stringify(Data));
+        await AsyncStorage.setItem('@' + this.ApiMethods.Get, JSON.stringify(Data, this.replacer));
     }
+    replacer(key, value) {
+        // Filtrando propiedades 
+        if (value.get && value.set) {
+          return undefined;
+        }
+        return value;
+      }
 }
 export { Entity }

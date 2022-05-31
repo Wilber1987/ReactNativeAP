@@ -12,16 +12,17 @@ class NewCursoFrm extends React.Component {
         this.state = {
             Bloques: []
         }
+        this.CargarCursos =this.props.route.params.CargarCursos;
     }
     NuevoBloque = async () => {
 
     }
     GuardarBloque = async (Bloque = (new TblBloqueCurso())) => {
-        console.log(Bloque);
         this.state.Bloques.push(Bloque);
         this.setState({
             Bloques: this.state.Bloques
         });
+        this.props.navigation.navigate("NewCursoFrm");
     }
     NuevoContenido = async (Bloque = (new TblBloqueCurso()), actualizarContenidos) => {
         this.props.navigation.navigate('FrmContenido', {
@@ -42,7 +43,7 @@ class NewCursoFrm extends React.Component {
                 const bloque = this.state.Bloques[index];
                 bloque.IdCurso = this.Curso.IdCurso;
                 await bloque.Save("IdBloque");
-                const contenidosBloques = bloque.TblContenidos.Data;
+                const contenidosBloques = bloque.TblContenidos.val;
                 for (let ibloque = 0; ibloque < contenidosBloques.length; ibloque++) {
                     const contenido = contenidosBloques[ibloque];
                     contenido.IdBloque = bloque.IdBloque;
@@ -93,6 +94,8 @@ class NewCursoFrm extends React.Component {
             <Button title="Guardar" onPress={async () => {
                 const response = await this.Save();
                 if (response) {
+                    console.log(this.props.route.params);
+                    await this.CargarCursos(); 
                     this.props.navigation.navigate("CursosView");
                 } else {
                     Alert.alert("error..");

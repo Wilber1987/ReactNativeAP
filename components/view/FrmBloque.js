@@ -19,8 +19,7 @@ class FrmBloque extends React.Component {
                 onChangeText={val => this.Bloque.NombreBloque = val}></TextInput>
             {/** OPCIONES */}
             <Button title="Guardar" onPress={async () => {  
-                await this.props.route.params.GuardarBloque(this.Bloque);           
-                this.props.navigation.navigate("NewCursoFrm");
+                await this.props.route.params.GuardarBloque(this.Bloque); 
             }} />
             <Button title="Cancelar" onPress={() => {
                 this.props.navigation.navigate("NewCursoFrm");

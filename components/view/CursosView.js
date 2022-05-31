@@ -39,9 +39,7 @@ class CursosView extends React.Component {
         this.props.navigation.navigate('MatriculadosView', { Dataset: this.state.Matriculados });
     }
     CargarBloques = async (Curso = (new TblCurso())) => {
-        console.log(Curso);
         const Bloques = await Curso.TblBloqueCurso.get();
-        console.log(Bloques);
         this.props.navigation.navigate('DetalleCursoView', {
             Curso: Curso,
             Dataset: Bloques
@@ -54,7 +52,8 @@ class CursosView extends React.Component {
                 placeholder='Buscar'
                 onChangeText={val => this.CargarCursos(val)}></TextInput>
             <Button title="Nuevo Curso" onPress={() => {
-                this.props.navigation.navigate("NewCursoFrm");
+                console.log(this.CargarCursos);
+                this.props.navigation.navigate("NewCursoFrm", { CargarCursos: this.CargarCursos });
             }} />
             {this.state.isLoading ?
                 <ActivityIndicator /> :

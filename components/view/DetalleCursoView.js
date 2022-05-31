@@ -20,6 +20,15 @@ class DetalleCursoView extends React.Component {
       actualizarContenidos: actualizarContenidos
     });
   }
+  GuardarBloque = async (Bloque = (new TblBloqueCurso())) => {
+    Bloque.IdCurso = this.state.Curso.IdCurso;
+    await Bloque.Save("IdBloque");   
+    const Bloques = await this.state.Curso.TblBloqueCurso.get();
+    this.setState({
+      Dataset: Bloques
+    });
+    this.props.navigation.navigate("DetalleCursoView");
+  }
   GuardarContenido = async (Bloque = (new TblBloqueCurso()), Contenido = (new TblContenidos())) => {
     Contenido.IdBloque = Bloque.IdBloque;
     await Contenido.Save("IdContenido");
@@ -28,20 +37,23 @@ class DetalleCursoView extends React.Component {
       Dataset: Bloques
     });
     this.props.navigation.navigate("DetalleCursoView");
-  }
+  }  
   render() {
     return <ScrollView style={{ padding: 10 }}>
       <Text style={styles.Title}>Bloques View</Text>
       <Button title="<- Regresar" onPress={() => {
         this.props.navigation.navigate("CursosView");
       }} />
+      <Button title="Nuevo Bloque" onPress={() => {
+        this.props.navigation.navigate("FrmBloque", { GuardarBloque: this.GuardarBloque });
+      }} />
       {
         this.state.Dataset.map(p => {
           return (<View>
             <Text>{p.NombreBloque}</Text>
-            <ContenidosBloque  key={p.IdBloque} Curso={this.state.Curso}
+            <ContenidosBloque key={p.IdBloque} Curso={this.state.Curso}
               NuevoContenido={this.NuevoContenido}
-              TblBloqueCurso={p}></ContenidosBloque> 
+              TblBloqueCurso={p}></ContenidosBloque>
           </View>)
         })
       }

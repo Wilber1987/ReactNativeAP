@@ -1,7 +1,7 @@
 import { Entity } from "./core/Entity";
 import { TblContenidos } from "./TblContenidos";
 
-class TblBloqueCurso extends Entity{
+class TblBloqueCurso extends Entity {
     constructor(props) {
         super();
         for (const prop in props) {
@@ -17,18 +17,18 @@ class TblBloqueCurso extends Entity{
     IdCurso = "";
     OrdenPosicion = "";
     TblContenidos = {
-        val: this.IdBloque, Data: [],
-        async get() {
-            if (this.val != "") {
+        val: [],
+        get: async () => {
+            if (this.IdBloque != "") {
                 const Contenidos = new TblContenidos();
-                return await Contenidos.GetByProps("IdBloque", this.val);
-            } else {
-                return this.Data;
-            }            
+                return await Contenidos.GetByProps("IdBloque", this.IdBloque);
+            }else {
+                return this.TblContenidos.val
+            }
         },
-        set(newValue) {
-            this.Data = newValue;
+        set: (newValue) => {
+            this.TblContenidos.val = newValue;
         }
     }
 }
-export {TblBloqueCurso}
+export { TblBloqueCurso }
